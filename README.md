@@ -17,7 +17,7 @@ G. Baffou, J. Phys. D: Appl. Phys. 54, 294002 (2021)</i></h2>
 
 <p>The processing is automatic, except for one step, the selection of the first order of diffraction, in the Fourier space. The user has to click on it, and then close the window. Here is what a first order looks like:</p>
 
-<img src="doc/scheme.png">
+<img src="doc/scheme.png" width="50%">
 
 
 <p>This code is associated with this article:
