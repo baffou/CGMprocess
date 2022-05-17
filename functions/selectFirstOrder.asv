@@ -1,6 +1,7 @@
 function selectFirstOrder(h)
 figure(h)
-title('Please, click precisely on the first order');
+t = title('Please, click precisely on the first order');
+set(t,'Position', get(t,'position')+[100 0 0]);
 ha = gca;
 hi = ha.Children;
 image = hi.CData;
@@ -17,5 +18,6 @@ xlim([1 Nx])
 xlim([1 Ny])
 
 drawCircle(h.UserData,h)
+title('You can now close the window')
 drawnow
 

@@ -1,0 +1,30 @@
+function h=imagecgm(T,W)
+
+if nargout
+    h=figure;
+else
+    figure
+end
+
+ax1=subplot(1,2,1);
+imagesc(T)
+xlabel('px')
+ylabel('px')
+set(gca,'DataAspectRatio',[1 1 1])
+set(gca,'YDir','normal')
+colorbar
+colormap(ax1,'Gray(1024')
+title('Normalized intensity (calculated)')
+
+ax2=subplot(1,2,2);
+imagesc(T)
+xlabel('px')
+ylabel('px')
+set(gca,'DataAspectRatio',[1 1 1])
+set(gca,'YDir','normal')
+cb2=colorbar('Fontsize',14);
+colormap(ax2,flipphase1024())
+title('OPD (calculated)')
+ylabel(cb2,'nm','FontSize',14)
+
+linkaxes([ax1,ax2])
