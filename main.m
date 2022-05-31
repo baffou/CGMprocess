@@ -34,13 +34,11 @@ model = 'NP';
 switch model
     case 'NP'
         folder='data/NPs/';
-        Itf = readmatrix([folder 'interferogram.txt']);
-        Ref = readmatrix([folder 'interferogram_ref.txt']);
     case 'Gaussian'
         folder='data/Gaussian/';
-        Itf = readmatrix('data/Gaussian/interferogram.txt');
-        Ref = readmatrix('data/Gaussian/interferogram_ref.txt');
 end
+Itf = readmatrix([folder 'interferogram.txt']);
+Ref = readmatrix([folder 'interferogram_ref.txt']);
 
 % To test non-square images:
 % Itf=Itf(end/4:3*end/4,1:end);
