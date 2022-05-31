@@ -69,14 +69,14 @@ end
  % It not, then Gamma, Z and p values you entered are wrong.
 
 % Computation of the OPD gradients
-
+crops
+qsdf
 theta = crops.angle;
 H = cell(2,1);
 Href = cell(2,1);
 [xx,yy] = meshgrid(1:Nx, 1:Ny);
-
 for ii = 1:2
-    R2C = (xx  - crops.x).^2/crops.Rx^2 + (yy - crops.y).^2/crops.Ry^2;
+    R2C = (xx  -Nx/2-1-crops.shiftx).^2/crops.Rx^2 + (yy - Ny/2-1-crops.shifty).^2/crops.Ry^2;
     circle = (R2C < 1); %circular mask
     FItfc = FItf.*circle;
     FRefc = FRef.*circle;
