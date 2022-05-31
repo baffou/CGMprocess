@@ -28,10 +28,8 @@ Ref = readmatrix('data/NPs/interferogram_ref.txt');
 FItf = fftshift(fft2(Itf));
 FRef = fftshift(fft2(Ref));
 
-%% Crop parameters
-x0=458;y0=418;R=100;theta=0.6435;
-
 %% Demodulation the Fourier space
+x0=458;y0=418;R=100;theta=0.6435;
 H = cell(2,1);
 Href = cell(2,1);
 [xx,yy] = meshgrid(1:Nx, 1:Ny);
@@ -73,8 +71,14 @@ Href = FRef.*circle;
 T = ifft2(ifftshift(H))./ifft2(ifftshift(Href));
 
 %% Plot the results
-figure,imagesc(OPD)
+figure
+ax1=subplot(1,2,1);
+imagesc(Itf)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
-
+ax2=subplot(1,2,2);
+imagesc(OPD)
+set(gca,'DataAspectRatio',[1,1,1])
+colorbar
+linkaxes([ax1,ax2])
 
