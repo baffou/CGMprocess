@@ -72,13 +72,25 @@ T = ifft2(ifftshift(H))./ifft2(ifftshift(Href));
 
 %% Plot the results
 figure
-ax1=subplot(1,2,1);
+ax1=subplot(2,2,1);
 imagesc(Itf)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
-ax2=subplot(1,2,2);
+ax2=subplot(2,2,2);
 imagesc(OPD)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
-linkaxes([ax1,ax2])
+caxis([-4 1]*1e-9)
+ax3=subplot(2,2,3);
+imagesc(DWx)
+set(gca,'DataAspectRatio',[1,1,1])
+colorbar
+colormap(gca,'Gray')
+ax4=subplot(2,2,4);
+imagesc(DWy)
+set(gca,'DataAspectRatio',[1,1,1])
+colorbar
+colormap(gca,'Gray')
+linkaxes([ax1,ax2,ax3,ax4])
+zoom on
 
