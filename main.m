@@ -187,4 +187,3 @@ linkaxes([ax3,ax6],'x')
 
 %% Function that plots both T and W on the same figure
 imagecgm(T,W)
-

@@ -11,7 +11,7 @@
 
 % Simplest version of the code
 
-clear all
+clear
 
 %% experimental parameters
 Gamma = 39e-6;  % period of the cross-grating (grexel size) [m]
@@ -76,21 +76,25 @@ ax1=subplot(2,2,1);
 imagesc(Itf)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
+title('interferogram')
 ax2=subplot(2,2,2);
 imagesc(OPD)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
-caxis([-4 1]*1e-9)
+clim([-4 1]*1e-9)
+title('OPD')
 ax3=subplot(2,2,3);
 imagesc(DWx)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
 colormap(gca,'Gray')
+title('OPD gradient along x')
 ax4=subplot(2,2,4);
 imagesc(DWy)
 set(gca,'DataAspectRatio',[1,1,1])
 colorbar
 colormap(gca,'Gray')
+title('OPD gradient along y')
 linkaxes([ax1,ax2,ax3,ax4])
 zoom on
 
