@@ -79,8 +79,8 @@ Iy = ifft2(ifftshift(H{2}));
 Irefx = ifft2(ifftshift(Href{1}));
 Irefy = ifft2(ifftshift(Href{2}));
 alpha = opt.Gamma/(4*pi*opt.distance);
-DW1 = alpha*angle(Ix.*conj(Irefx));
-DW2 = alpha*angle(Iy.*conj(Irefy));
+DW1 = -alpha*angle(Ix.*conj(Irefx));
+DW2 = -alpha*angle(Iy.*conj(Irefy));
 DWx = crops0.angle.cos*DW1 - crops0.angle.sin*DW2;
 DWy = crops0.angle.sin*DW1 + crops0.angle.cos*DW2;
 
@@ -109,4 +109,11 @@ circle = (R2C < 1); %circular mask
 HT = FItf.*circle;
 HTref = FRef.*circle;
 
-T = ifft2(ifftshift(HT))./ifft2(ifftshift(HTref));
+switch opt.Tnormalisation 
+    case 'division'
+        T = ifft2(ifftshift(HT))./ifft2(ifftshift(HTref));
+
+    case 'subtraction'
+        T = ifft2(ifftshift(HT)) - ifft2(ifftshift(HTref));
+
+end
