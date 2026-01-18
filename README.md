@@ -5,6 +5,10 @@ G. Baffou, J. Phys. D: Appl. Phys. 54, 294002 (2021)</i></h2>
 <a href="https://iopscience.iop.org/article/10.1088/1361-6463/abfbf9/pdf" target="_blank">journal</a>&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp; 
 <a href="http://guillaume.baffou.com/publications/053-Baffou-JPhysD.pdf" target="_blank">pdf</a>
 
+More recent and comprehensive repository:
+https://github.com/baffou/PhaseLAB
+
+
 <h3>Introduction</h3>
 <p><b>Cross-grating phase microscopy</b> (CGMs) is a wavefront sensing technique that can be used as a high-resolution, highly sensitive quantitative phase microscopy technique. It is based on the simple association of a regular camera and a 2D diffraction grating (aka cross-grating) separated by a millimetric distance <a href="http://guillaume.baffou.com/publications/053-Baffou-JPhysD.pdf" target="_blank">[1]</a>. The cross-grating creates a so-called interferogram image that is processed to retrieve both the intensity and the phase of the incoming light beam.</p>
 
