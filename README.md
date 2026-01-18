@@ -4,8 +4,9 @@
 G. Baffou, J. Phys. D: Appl. Phys. 54, 294002 (2021)</i></h2>
 <a href="https://iopscience.iop.org/article/10.1088/1361-6463/abfbf9/pdf" target="_blank">journal</a>&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp; 
 <a href="http://guillaume.baffou.com/publications/053-Baffou-JPhysD.pdf" target="_blank">pdf</a>
+<br>
 
-More recent and comprehensive repository:
+<h2>More recent and comprehensive repository:</h2>
 https://github.com/baffou/PhaseLAB
 
 
